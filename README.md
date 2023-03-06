@@ -33,7 +33,7 @@ Accueil / formulaire de connexion
     ├─ Jeu
     │  └─ Écran "rejouer"
     ├─ Tableau des meilleurs scores
-	└─ Crédits
+    └─ Crédits
 ```
 
 Si vous pensez à des vues supplémentaires que vous trouveriez pertinentes, vous pouvez tout à fait en ajouter.
