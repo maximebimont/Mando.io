@@ -8,7 +8,6 @@ addWebpackMiddleware(app);
 const httpServer = http.createServer(app);
 const io = new IOServer(httpServer);
 
-
 io.on('connection', socket => {
 	console.log(`Nouvelle connexion du client ${socket.id}`);
 	socket.emit('allowConnection');

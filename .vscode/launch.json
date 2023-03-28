@@ -5,23 +5,19 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"console": "integratedTerminal",
-			"internalConsoleOptions": "neverOpen",
-			"name": "nodemon",
-			"program": "${workspaceFolder}/server/src/index.ts",
+			"name": "Debug server",
+			"type": "node",
 			"request": "launch",
-			"restart": true,
-			"runtimeExecutable": "${workspaceFolder}/node_modules/.bin/nodemon",
+			"cwd": "${workspaceFolder}",
+			"runtimeExecutable": "npm",
+			"runtimeArgs": ["run-script", "dev"],
 			"skipFiles": [
 				"<node_internals>/**"
 			],
-			"type": "node",
 			"env": {
-				"SELF_SIGNED_HTTPS": "false",
-			},
-			"args": "--ignore ./client -- -P ./tsconfig.server.json",
-			"preLaunchTask": "clean server/build folder",
-		},
+				"PORT": "8000"
+			}
+		},		
 		{
 			"name": "Debug on Chrome",
 			"type": "chrome",

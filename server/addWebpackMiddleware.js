@@ -6,13 +6,13 @@ import webpackConfig from '../webpack.config.js';
 export default function addWebpackMiddleware(app) {
 	const webpackConfigForMiddleware = {
 		...webpackConfig,
-		mode: 'development', 
-		plugins: [new webpack.HotModuleReplacementPlugin()], 
+		mode: 'development',
+		plugins: [new webpack.HotModuleReplacementPlugin()],
 	};
 	if (typeof webpackConfigForMiddleware.entry === 'string') {
 		webpackConfigForMiddleware.entry = [
-			'webpack-hot-middleware/client?reload=true', 
-			webpackConfigForMiddleware.entry, 
+			'webpack-hot-middleware/client?reload=true',
+			webpackConfigForMiddleware.entry,
 		];
 	}
 	const compiler = webpack(webpackConfigForMiddleware);
