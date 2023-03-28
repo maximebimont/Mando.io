@@ -1,0 +1,2 @@
+!function(){var e=document.querySelector(".gameCanvas"),t=e.getContext("2d");console.log(e.clientWidth),console.log(e.width),t.clearRect(0,0,e.width,e.height),t.beginPath(),t.moveTo(50,50),t.strokeStyle="blue",t.fillStyle="blue",t.arc(50,50,10,0,2*Math.PI,!1),t.fill(),t.stroke()}();
+//# sourceMappingURL=main.bundle.js.map
