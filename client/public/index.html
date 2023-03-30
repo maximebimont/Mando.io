@@ -5,30 +5,72 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<title>GrowIt.io</title>
+	<title>Mando.io</title>
 
 	<link rel="stylesheet" href="css/main.css" />
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 	<script src="build/main.bundle.js" defer></script>
 </head>
 
 <body>
-	<canvas class="gameCanvas" width="800" height="800"></canvas>
 
-	<!-- Partie Acceuil -->
-
+	<section class="home">
+		<!-- Partie Acceuil GIF-->
+		<div class="GIF" style="display: flex;">      
+			<button class="skipButton"><i class="fas fa-angle-right"></i></button>
+		</div>
+		<!-- Partie Acceuil Select-->
+		<div class="homeSelect">  
+			<div></div>
+			<img class="image" src="images/logo.png"/>  
+			<form class="speudo">
+				<div>
+					<label for="name">Speudo :</label>
+					<input type="text" id="name" name="user_name">
+				</div>
+				<button class="Jouer" type="submit">Jouer</button>
+				<button class="Score" type="submit">Score</button>
+				<button class="Credit" type="submit">Credit</button>
+			</form>
+		</div>
+	</section>
+	
 
 	<!-- Partie Jeu -->
-
-
-	<!-- Partie Jeu -->
-
+	<div class="GameCanvas">
+		<canvas class="gameCanvas" width="900" height="900"></canvas>
+	</div>
+	
+	<!-- Partie Game-Over -->
+	<div class="Game-Over">
+		<article class="Popup">
+			<button class="closeButton">X</button>
+			<h2>Game-Over</h2>
+			<ul>
+				<li id="Time">Time :</li>
+				<li id="Scores">Scores :</li>
+				<li id="Food">Food :</li>
+			</ul>
+			<button class="Rejouer">Rejouer</button>
+		</article>
+	</div>
 
 	<!-- Partie Score -->
-
+	<section class="scores">
+		<ul class="scoresContainer">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+		<button class="Acceuil_scores" type="submit">Acceuil</button>
+	</section>
 
 	<!-- Partie Crédit -->
-
+	<section class="credit">
+		<h2>maxime loic</h2>
+		<button class="Acceuil_credit" type="submit">Acceuil</button>
+	</section>
 	
 </body>
 

@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* all similar content styling codes */
+
+
+
+/* menu btn styling */
+.skipButton{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #F2DC1D;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    z-index: 1;
+    font-size: 30px;
+    border-radius: 6px;
+    border: 0px;
+    cursor: pointer;
+}
+.skipButton{
+    filter: brightness(80%);
+}
+
+/* home section styling */
+.GIF{
+    background: url("https://media.giphy.com/media/l1uguGf2RVIsTXNDO/giphy.gif") no-repeat center ;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+    z-index: 999;
+}
+
+.homeSelect{
+    background: url("../images/ciel-etoile.avif") no-repeat center ;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+body > .home .homeSelect .logo {
+	align-self : center;
+	display: flex;
+	align-items: center;
+	color: #c5c3c0;
+	text-decoration: none;
+	padding-right: 50px;
+}
+
+
+/* Game section styling */
+canvas {
+	background-color: white;
+	border: 3px dashed #777;
+	width: 100%;
+ 	height: 100%;
+ 	position: absolute;
+}
+
+
+/* Game-Over section styling */
+.Game-Over {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color:rgba(0,0,0,.5);
+	z-index: 1;
+	backdrop-filter: blur(3px);
+}
+.Game-Over .Popup {
+	margin: 0 auto;
+	top: 50%;
+	transform: translateY(-50%);
+	background: white;
+	border-radius: 4px;
+	color: black;
+	margin: 0 100px;
+	position: relative;
+	padding: 10px 50px 20px;
+}
+.Game-Over .Popup .closeButton {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	padding: 10px;
+	border-style: outset;
+}
