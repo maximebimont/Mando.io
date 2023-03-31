@@ -14,28 +14,29 @@
 </head>
 
 <body>
-
-	<section class="home">
-		<!-- Partie Acceuil GIF-->
-		<div class="GIF" style="display: flex;">      
-			<button class="skipButton"><i class="fas fa-angle-right"></i></button>
-		</div>
+	<!-- Partie Acceuil GIF-->
+	<div class="GIF" style="display: flex;">      
+		<button class="skipButton"><i class="fas fa-angle-right"></i></button>
+	</div>
 		<!-- Partie Acceuil Select-->
-		<div class="homeSelect">  
-			<div></div>
-			<img class="image" src="images/logo.png"/>  
-			<form class="speudo">
-				<div>
-					<label for="name">Speudo :</label>
-					<input type="text" id="name" name="user_name">
-				</div>
-				<button class="Jouer" type="submit">Jouer</button>
-				<button class="Score" type="submit">Score</button>
-				<button class="Credit" type="submit">Credit</button>
-			</form>
-		</div>
-	</section>
-	
+		<section class="homeSelect">  
+			<div class="column top">
+				<img src="images/logo.png"/>  
+			</div>
+			<div class="column bottom">
+				<form class="form_game">
+					<div class="select_speudo">
+						<label for="name">Pseudo :</label>
+						<input type="text" id="name" name="user_name">
+					</div>
+					<div class="button_form">
+						<button class="Jouer" type="submit">Jouer</button>
+						<button class="Score" type="submit">Score</button>
+						<button class="Credit" type="submit">Credit</button>
+					</div>
+				</form>
+			</div>
+		</section>
 
 	<!-- Partie Jeu -->
 	<div class="GameCanvas">

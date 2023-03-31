@@ -8,24 +8,19 @@ html{
     scroll-behavior: smooth;
 }
 
-/* custom scroll bar */
+/*custom scroll bar*/
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 2px;
 }
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #93DC83;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: lightgreen;
 }
-
-/* all similar content styling codes */
-
-
 
 /* menu btn styling */
 .skipButton{
@@ -43,11 +38,12 @@ html{
     border: 0px;
     cursor: pointer;
 }
-.skipButton{
+
+.skipButton:hover{
     filter: brightness(80%);
 }
 
-/* home section styling */
+/*GIF styling*/
 .GIF{
     background: url("https://media.giphy.com/media/l1uguGf2RVIsTXNDO/giphy.gif") no-repeat center ;
     height: 100vh;
@@ -56,9 +52,10 @@ html{
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
-    z-index: 999;
+    z-index: 2;
 }
 
+/* home section styling */
 .homeSelect{
     background: url("../images/ciel-etoile.avif") no-repeat center ;
     height: 100vh;
@@ -68,15 +65,59 @@ html{
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
 }
-body > .home .homeSelect .logo {
-	align-self : center;
-	display: flex;
-	align-items: center;
-	color: #c5c3c0;
-	text-decoration: none;
-	padding-right: 50px;
+
+.homeSelect .top{
+    height: 40%;
 }
 
+.homeSelect .top img{
+    display: block;
+    padding-top: 6%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.homeSelect .bottom{
+    height: 60%;
+}
+     
+.homeSelect .bottom .form_game{
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    width: 40%;
+}
+
+.homeSelect .bottom .form_game .select_speudo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f2dd1dce;
+}
+
+.homeSelect .bottom .form_game .button_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.homeSelect .bottom .form_game .button_form button{
+    border-radius: 25%;
+    border: 2px solid #f2dd1dce;
+    background-color: #000000;
+    color: #f2dd1dce;
+    transition: all 0.3s ease;
+    margin: 10px;
+    cursor: pointer;
+}
+    
+.home .homeSelect .speudo button:hover{
+    transform: scale(1.05);
+    color: yellow;
+    border: 2px solid yellow;
+}
 
 /* Game section styling */
 canvas {
@@ -86,7 +127,6 @@ canvas {
  	height: 100%;
  	position: absolute;
 }
-
 
 /* Game-Over section styling */
 .Game-Over {
@@ -99,6 +139,7 @@ canvas {
 	z-index: 1;
 	backdrop-filter: blur(3px);
 }
+
 .Game-Over .Popup {
 	margin: 0 auto;
 	top: 50%;
@@ -110,6 +151,7 @@ canvas {
 	position: relative;
 	padding: 10px 50px 20px;
 }
+
 .Game-Over .Popup .closeButton {
 	position: absolute;
 	right: 10px;
