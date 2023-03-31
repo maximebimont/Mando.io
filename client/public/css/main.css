@@ -121,7 +121,7 @@ html{
 
 /* Game section styling */
 canvas {
-	background-color: white;
+	background-color: black;
 	border: 3px dashed #777;
 	width: 100%;
  	height: 100%;

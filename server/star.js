@@ -1,12 +1,12 @@
 import colors from './colors.js';
 
-export default class Bubble {
+export default class Star {
 	color;
 	x;
 	y;
 
 	constructor(x, y) {
-		this.color = colors[Math.floor(Math.random() * colors.length)];
+		this.color = white;
 		this.x = x;
 		this.y = y;
 	}
