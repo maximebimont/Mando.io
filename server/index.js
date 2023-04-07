@@ -8,7 +8,7 @@ const app = express();
 addWebpackMiddleware(app);
 const httpServer = http.createServer(app);
 const io = new IOServer(httpServer);
-const game = new Game(100, 100);
+const game = new Game(250, 250);
 
 io.on('connection', socket => {
 	console.log(`Nouvelle connexion du client ${socket.id}`);
