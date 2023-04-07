@@ -39,13 +39,19 @@ document.querySelector('.Acceuil_credit').addEventListener('click', event => {
 //const mainMenu = document.querySelector('.menu');
 const playButton = document.querySelector('.play');
 const leaderBoard = document.querySelector('.leaderBoard');
-const score = document.querySelector('.score-bubble');
+const score = document.querySelector('.score-stars');
 const loginForm = document.querySelector('.form_game');
 const nameInput = loginForm.querySelector('input[type=text]');
 const endGameMenu = document.querySelector('.Game-Over');
-const menuButton = document.querySelector('.menuButton');
 const playAgain = document.querySelector('.Rejouer');
 const skip = document.querySelector('.skipButton');
+const closeButton = document.querySelector('.closeButton');
+
+closeButton.addEventListener('click', event => {
+	event.preventDefault();
+	endGameMenu.classList.add('hide');
+	mainMenu.classList.remove('hide');
+});
 
 skip.addEventListener('click', event => {
 	event.preventDefault();

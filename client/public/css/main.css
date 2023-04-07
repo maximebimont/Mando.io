@@ -66,35 +66,53 @@ body {
 
 /* Game-Over section styling */
 .Game-Over {
+	position: absolute;
     display: flex;
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
+    flex-direction: column;
+    align-items: center;
 	background-color:rgba(0,0,0,.5);
 	z-index: 1;
 	backdrop-filter: blur(3px);
 }
 
 .Game-Over .Popup {
+    font-family:Arial, Helvetica, sans-serif;
 	margin: 0 auto;
 	top: 50%;
 	transform: translateY(-50%);
-	background: white;
-	border-radius: 4px;
-	color: black;
+	background: black;
+	border-radius: 10px;
+	color:#F2DC1D;
 	margin: 0 100px;
 	position: relative;
-	padding: 10px 50px 20px;
+	padding: 40px 70px 40px;
+    border: 5px solid;
+    border-color: #F2DC1D;
+}
+
+.Game-Over .Popup h2,.Game-Over .Popup ul{
+    margin-bottom: 20px;
 }
 
 .Game-Over .Popup .closeButton {
 	position: absolute;
+    background-color: #F2DC1D;
+    color: black;
 	right: 10px;
 	top: 10px;
-	padding: 10px;
-	border-style: outset;
+	padding: 6px;
+    border: 0;
+    border-radius: 4px;
+}
+
+.Game-Over .Popup .Rejouer {
+	position: absolute;
+    background-color: #F2DC1D;
+    color: black;
+    border: 0px;
+    border-radius: 4px;
+    right: 38%;
+    padding: 6px;
 }
 
 .hide{
@@ -110,7 +128,7 @@ body {
 }
 
 /*---ScoreBord---*/
-.score-bubble{
+.score-stars{
     font-family:Arial, Helvetica, sans-serif;
     position:absolute;
     bottom: 20px;
