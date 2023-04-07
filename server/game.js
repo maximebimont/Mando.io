@@ -32,7 +32,7 @@ export default class Game {
 			new Player(
 				Math.random() * Game.width - Game.width / 2,
 				Math.random() * Game.height - Game.height / 2,
-				Color.randomColor(),
+				Color.getColor(),
 				10,
 				socketId,
 				name
