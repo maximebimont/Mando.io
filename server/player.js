@@ -38,7 +38,7 @@ export default class Player extends Cell {
 	}
 
 	updateSpeed() {
-		this.speed = (2.2 * Math.pow(this.radius * 2, -0.43)) / 4;
+		this.speed = (2.2 * Math.pow(this.radius * 2, -0.43)) / 6;
 	}
 
 	updateZoom() {
