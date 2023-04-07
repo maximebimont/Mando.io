@@ -5,10 +5,7 @@ const GIF = document.querySelector('.GIF');
 const mainMenu = document.querySelector('.homeSelect');
 
 const Game = document.querySelector('.GameCanvas');
-
-// const end = document.querySelector('.Game-Over');
-// end.style.display = 'none';
-
+Game.style.visibility = 'hidden';
 // const scores = document.querySelector('.scores');
 // scores.style.display = 'none';
 
@@ -54,6 +51,7 @@ skip.addEventListener('click', event => {
 	event.preventDefault();
 	GIF.classList.add('hide');
 	mainMenu.classList.remove('hide');
+	Game.style.visibility = '';
 });
 
 playButton.addEventListener('click', event => {

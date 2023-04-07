@@ -8,18 +8,12 @@ html{
     scroll-behavior: smooth;
 }
 
-/*custom scroll bar*/
-::-webkit-scrollbar {
-    width: 2px;
-}
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-::-webkit-scrollbar-thumb {
-    background: #93DC83;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: lightgreen;
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* menu btn styling */
@@ -48,86 +42,26 @@ html{
     display: flex;
     background: url("https://media.giphy.com/media/l1uguGf2RVIsTXNDO/giphy.gif") no-repeat center ;
     height: 100vh;
-    color: #fff;
     min-height: 500px;
     background-size: cover;
     background-attachment: fixed;
-    font-family: 'Ubuntu', sans-serif;
-    z-index: 2;
 }
 
 /* home section styling */
 .homeSelect{
-    display: flex;
-    background: url("../images/ciel-etoile.avif") no-repeat center ;
-    height: 100vh;
-    color: #fff;
-    min-height: 500px;
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-.homeSelect .top{
-    height: 40%;
-}
-
-.homeSelect .top img{
-    display: block;
-    padding-top: 6%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-}
-
-.homeSelect .bottom{
-    height: 60%;
-}
-     
-.homeSelect .bottom .form_game{
-    display: block;
-    margin-left: auto;
-    margin-right: auto; 
-    width: 40%;
-}
-
-.homeSelect .bottom .form_game .select_speudo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #f2dd1dce;
-}
-
-.homeSelect .bottom .form_game .button_form{
+    position:absolute;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-.homeSelect .bottom .form_game .button_form button{
-    border-radius: 25%;
-    border: 2px solid #f2dd1dce;
-    background-color: #000000;
-    color: #f2dd1dce;
-    transition: all 0.3s ease;
-    margin: 10px;
-    cursor: pointer;
-}
-    
-.home .homeSelect .speudo button:hover{
-    transform: scale(1.05);
-    color: yellow;
-    border: 2px solid yellow;
-}
-
-/* Game section styling */
-canvas {
-	background-color: black;
-	border: 3px dashed #777;
-	width: 100%;
- 	height: 100%;
- 	position: absolute;
+    align-items: center;
+    background-color: black ; 
+    color: #fff;  
+    border-radius: 5%;
+    border: 5px solid;
+    border-color: #F2DC1D;
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    z-index: 10;
 }
 
 /* Game-Over section styling */
@@ -165,4 +99,57 @@ canvas {
 
 .hide{
     display: none;
+}
+
+.GameCanvas {
+    background-color:black;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+ 	height: 100%;
+}
+
+/*---ScoreBord---*/
+.score-bubble{
+    font-family:Arial, Helvetica, sans-serif;
+    position:absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #F2DC1D;
+    opacity: 0.8;
+}
+
+.score{
+    color: black;
+    font-size: 24px;
+}
+
+.score::before{
+    content: 'score: ';
+}
+
+/*---LeaderBord---*/
+.leaderBoard{
+    font-family:Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    position:absolute;
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color:#F2DC1D;
+    color: black;
+    opacity: 0.8;
+}
+
+.leaderBoard>table{
+    font-size: 18px;
+}
+
+.leaderBoard>h3{
+    font-size: 24px;
 }
