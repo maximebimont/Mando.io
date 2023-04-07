@@ -1,13 +1,8 @@
-import colors from './colors.js';
+import Cell from './cell.js';
+import Color from './color.js';
 
-export default class Star {
-	color;
-	x;
-	y;
-
+export default class Start extends Cell {
 	constructor(x, y) {
-		this.color = white;
-		this.x = x;
-		this.y = y;
+		super(x, y, Color.randomColor(), 1);
 	}
 }
