@@ -108,7 +108,7 @@ let player,
 
 function drawGrid() {
 	context.beginPath();
-	context.strokeStyle = 'yellow';
+	context.strokeStyle = 'grey';
 	context.lineWidth = 0.05;
 	for (let x = -mapWidth; x <= mapWidth; x += 5) {
 		context.moveTo(x, -mapHeight);
@@ -139,14 +139,14 @@ function drawPlayer(player) {
 	context.stroke();
 
 	context.textAlign = 'center';
-	context.fillStyle = 'green';
+	context.fillStyle = 'black';
 	context.font = `bold ${player.radius * 0.5}px arial`;
 	context.fillText(
 		player.name,
 		player.pos.x,
 		player.pos.y + player.radius * 0.15
 	);
-	context.strokeStyle = 'pink';
+	context.strokeStyle = 'yellow';
 	context.strokeText(
 		player.name,
 		player.pos.x,
@@ -196,8 +196,8 @@ socket.on('updateGame', game => {
 	stars = game.stars;
 	player = players.find(p => p.socketId == socket.id);
 	if (player != undefined) {
-		// refreshScore(player.score);
-		// refreshLeaderBoard();
+		refreshScore(player.score);
+		refreshLeaderBoard();
 	}
 });
 
@@ -226,22 +226,22 @@ setInterval(() => {
 	}
 }, 1000 / 60);
 
-// function refreshLeaderBoard() {
-// 	const orderedPlayers = players.slice(0, players.length).reverse();
-// 	let leaderBoard = '';
-// 	const playerIndex = orderedPlayers.findIndex(
-// 		p => p.socketId == player.socketId
-// 	);
-// 	orderedPlayers.slice(0, 10).forEach((p, idx) => {
-// 		leaderBoard += `<tr><td class="${idx == playerIndex ? 'me' : ''}">${
-// 			idx + 1
-// 		}.${p.name}</td></tr>`;
-// 	});
-// 	if (playerIndex >= 10)
-// 		leaderBoard += `<tr><td>${playerIndex}.${player.name}</td></tr>`;
-// 	document.querySelector('.bodyBoard').innerHTML = leaderBoard;
-// }
+function refreshLeaderBoard() {
+	const orderedPlayers = players.slice(0, players.length).reverse();
+	let leaderBoard = '';
+	const playerIndex = orderedPlayers.findIndex(
+		p => p.socketId == player.socketId
+	);
+	orderedPlayers.slice(0, 10).forEach((p, idx) => {
+		leaderBoard += `<tr><td class="${idx == playerIndex ? 'me' : ''}">${
+			idx + 1
+		}.${p.name}</td></tr>`;
+	});
+	if (playerIndex >= 10)
+		leaderBoard += `<tr><td>${playerIndex}.${player.name}</td></tr>`;
+	document.querySelector('.bodyBoard').innerHTML = leaderBoard;
+}
 
-// function refreshScore(score) {
-// 	document.querySelector('.score').innerHTML = score;
-// }
+function refreshScore(score) {
+	document.querySelector('.score').innerHTML = score;
+}
