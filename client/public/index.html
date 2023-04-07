@@ -14,12 +14,27 @@
 </head>
 
 <body>
+
+	<!--In Game Menus-->
+	<div class="score-bubble hide">
+		<span class="score">0</span>
+	</div>
+
+	<div class="leaderBoard hide">
+		<h3>LeaderBoard</h3>
+		<table>
+			<tbody class="bodyBoard">
+				
+			</tbody>
+		</table>
+	</div>
+
 	<!-- Partie Acceuil GIF-->
-	<div class="GIF" style="display: flex;">      
+	<div class="GIF">      
 		<button class="skipButton"><i class="fas fa-angle-right"></i></button>
 	</div>
 		<!-- Partie Acceuil Select-->
-		<section class="homeSelect">  
+		<div class="homeSelect hide">  
 			<div class="column top">
 				<img src="images/logo.png"/>  
 			</div>
@@ -30,21 +45,21 @@
 						<input type="text" id="name" name="user_name">
 					</div>
 					<div class="button_form">
-						<button class="Jouer" type="submit">Jouer</button>
+						<button class="play" type="submit">Jouer</button>
 						<button class="Score" type="submit">Score</button>
 						<button class="Credit" type="submit">Credit</button>
 					</div>
 				</form>
 			</div>
-		</section>
+		</div>
 
 	<!-- Partie Jeu -->
 	<div class="GameCanvas">
-		<canvas class="gameCanvas"></canvas>
+		<canvas class="gameCanvas" width="500" height="500" ></canvas>
 	</div>
 	
 	<!-- Partie Game-Over -->
-	<div class="Game-Over">
+	<div class="Game-Over hide">
 		<article class="Popup">
 			<button class="closeButton">X</button>
 			<h2>Game-Over</h2>
@@ -58,7 +73,7 @@
 	</div>
 
 	<!-- Partie Score -->
-	<section class="scores">
+	<section class="scores hide">
 		<ul class="scoresContainer">
 			<li>1</li>
 			<li>2</li>
@@ -68,7 +83,7 @@
 	</section>
 
 	<!-- Partie Crédit -->
-	<section class="credit">
+	<section class="credit hide">
 		<h2>maxime loic</h2>
 		<button class="Acceuil_credit" type="submit">Acceuil</button>
 	</section>

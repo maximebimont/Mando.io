@@ -45,6 +45,7 @@ html{
 
 /*GIF styling*/
 .GIF{
+    display: flex;
     background: url("https://media.giphy.com/media/l1uguGf2RVIsTXNDO/giphy.gif") no-repeat center ;
     height: 100vh;
     color: #fff;
@@ -57,6 +58,7 @@ html{
 
 /* home section styling */
 .homeSelect{
+    display: flex;
     background: url("../images/ciel-etoile.avif") no-repeat center ;
     height: 100vh;
     color: #fff;
@@ -130,6 +132,7 @@ canvas {
 
 /* Game-Over section styling */
 .Game-Over {
+    display: flex;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -158,4 +161,8 @@ canvas {
 	top: 10px;
 	padding: 10px;
 	border-style: outset;
+}
+
+.hide{
+    display: none;
 }
