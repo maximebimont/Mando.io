@@ -183,6 +183,7 @@ socket.on('joined', () => {
 
 socket.on('dead', () => {
 	console.log(endGameMenu);
+	//deathTimer(player);
 	endGameMenu.classList.remove('hide');
 	leaderBoard.classList.add('hide');
 	score.classList.add('hide');
@@ -245,3 +246,7 @@ function refreshLeaderBoard() {
 function refreshScore(score) {
 	document.querySelector('.score').innerHTML = score;
 }
+
+// function deathTimer(player) {
+// 	document.querySelector('.Time').innerHTML = player.getPlayTimer();
+// }

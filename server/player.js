@@ -10,7 +10,7 @@ export default class Player extends Cell {
 	zoom;
 	socketId;
 	// image;
-	// timer;
+	birthDate;
 
 	constructor(x, y, color, score, socketId, name) {
 		super(x, y, color, score);
@@ -18,6 +18,7 @@ export default class Player extends Cell {
 		this.score = score;
 		this.socketId = socketId;
 		this.updateSpeed();
+		this.birthDate = new Date();
 	}
 
 	setDirection(x, y) {
@@ -89,5 +90,12 @@ export default class Player extends Cell {
 		if (this.pos.y >= Game.height / 2 - radius30Percent) {
 			this.pos.y = Game.height / 2 - radius30Percent;
 		}
+	}
+
+	getPlayTime() {
+		deathTime = new Date();
+		timer = new Date();
+		timer = deathTime - this.birthDate;
+		return timer.getMinutes();
 	}
 }
