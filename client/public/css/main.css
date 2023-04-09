@@ -39,10 +39,12 @@ body {
 
 /*GIF styling*/
 .GIF{
-    display: flex;
+    position: absolute;
+    top: 0; left: 0;
     background: url("https://media.giphy.com/media/l1uguGf2RVIsTXNDO/giphy.gif") no-repeat center ;
+    width: 100%;
     height: 100vh;
-    min-height: 500px;
+    min-height: 100%;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -64,15 +66,38 @@ body {
     z-index: 10;
 }
 
+.select_speudo{
+    font-family:Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+    color: #F2DC1D;
+    text-transform:capitalize;
+}
+
+.button_form{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.button_form button{
+    margin-bottom: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #F2DC1D;
+    color: black;
+    border: 0;
+    border-radius: 4px;
+    padding: 6px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+
 /* Game-Over section styling */
 .Game-Over {
 	position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-	background-color:rgba(0,0,0,.5);
 	z-index: 1;
-	backdrop-filter: blur(3px);
 }
 
 .Game-Over .Popup {
@@ -81,7 +106,7 @@ body {
 	top: 50%;
 	transform: translateY(-50%);
 	background: black;
-	border-radius: 10px;
+	border-radius: 4px;
 	color:#F2DC1D;
 	margin: 0 100px;
 	position: relative;
@@ -134,7 +159,7 @@ body {
     bottom: 20px;
     left: 20px;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 4px;
     background-color: #F2DC1D;
     opacity: 0.8;
 }
@@ -145,7 +170,7 @@ body {
 }
 
 .score::before{
-    content: 'score: ';
+    content: 'Score: ';
 }
 
 /*---LeaderBord---*/
@@ -158,7 +183,7 @@ body {
     top: 20px;
     right: 20px;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 4px;
     background-color:#F2DC1D;
     color: black;
     opacity: 0.8;
