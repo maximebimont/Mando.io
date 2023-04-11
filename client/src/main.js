@@ -106,8 +106,7 @@ let inGame = false;
 let player,
 	actualZoom = 0,
 	players = [],
-	stars = [],
-	color = Color.getColor();
+	stars = [];
 
 function drawGrid() {
 	context.beginPath();
@@ -136,7 +135,7 @@ function drawStars(star) {
 function drawPlayer(player) {
 	context.beginPath();
 	context.strokeStyle = 'black';
-	context.fillStyle = color;
+	context.fillStyle = player.color;
 	context.arc(player.pos.x, player.pos.y, player.radius, 0, 2 * Math.PI, false);
 	context.fill();
 	context.stroke();
