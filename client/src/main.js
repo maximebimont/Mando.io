@@ -5,35 +5,6 @@ import Color from './color.js';
 const GIF = document.querySelector('.GIF');
 const mainMenu = document.querySelector('.homeSelect');
 const Game = document.querySelector('.GameCanvas');
-
-const credit = document.querySelector('.credit');
-
-// document.querySelector('.Score').addEventListener('click', event => {
-// 	event.preventDefault();
-// 	homeSelector.style.display = 'none';
-// 	scores.style.display = '';
-// });
-
-document.querySelector('.Credit').addEventListener('click', event => {
-	event.preventDefault();
-	homeSelector.style.display = 'none';
-	credit.style.display = '';
-});
-
-document.querySelector('.Acceuil_scores').addEventListener('click', event => {
-	event.preventDefault();
-	homeSelector.style.display = '';
-	//scores.style.display = 'none';
-});
-document.querySelector('.Acceuil_credit').addEventListener('click', event => {
-	event.preventDefault();
-	homeSelector.style.display = '';
-	credit.style.display = 'none';
-});
-
-////////////////////////////
-
-//const mainMenu = document.querySelector('.menu');
 const playButton = document.querySelector('.play');
 const leaderBoard = document.querySelector('.leaderBoard');
 const score = document.querySelector('.score-stars');
