@@ -77,18 +77,18 @@ export default class Player extends Cell {
 	}
 
 	returnInMapIfIsOut() {
-		const radius30Percent = this.radius * 0.3;
-		if (this.pos.x <= -Game.width / 2 + radius30Percent) {
-			this.pos.x = -Game.width / 2 + radius30Percent;
+		const r3pc = this.radius * 0.3;
+		if (this.pos.x <= -Game.width / 2 + r3pc) {
+			this.pos.x = -Game.width / 2 + r3pc;
 		}
-		if (this.pos.x >= Game.width / 2 - radius30Percent) {
-			this.pos.x = Game.width / 2 - radius30Percent;
+		if (this.pos.x >= Game.width / 2 - r3pc) {
+			this.pos.x = Game.width / 2 - r3pc;
 		}
-		if (this.pos.y <= -Game.height / 2 + radius30Percent) {
-			this.pos.y = -Game.height / 2 + radius30Percent;
+		if (this.pos.y <= -Game.height / 2 + r3pc) {
+			this.pos.y = -Game.height / 2 + r3pc;
 		}
-		if (this.pos.y >= Game.height / 2 - radius30Percent) {
-			this.pos.y = Game.height / 2 - radius30Percent;
+		if (this.pos.y >= Game.height / 2 - r3pc) {
+			this.pos.y = Game.height / 2 - r3pc;
 		}
 	}
 

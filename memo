@@ -1,37 +1,6 @@
-Map :
-    - Taille Fixe
-    - Cellule spawn aléatoirement
-    - Nombre max de Cellule
-    //Variables
-        - tableau de cellule
-    //Méthodes
-        - Création d'une map
+- game over / timer
+- credit et score
 
-Joueur :
-    //Variables
-        - Nom
-        - Image
-        - X
-        - Y
-        - Vitesse
-        - Score
-        - Timer
-    //Méthodes
-        - Création d'un joueur
-
-Cellule :
-    //Variables
-        - Couleur
-        - X
-        - Y
-    //Méthodes
-        - création d'une cellule
-
-Jeu :
-    //Variables
-        - une map
-        - un joueur
-    //Méthodes
-        - Grossissement d'un joueur quand il mange une cellule           
-        - Déplacement d'un joueur
-
+- image perso
+- retirer zoom molette
+- refactor
