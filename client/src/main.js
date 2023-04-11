@@ -1,5 +1,5 @@
 import { io } from 'socket.io-client';
-import Color from './color.js';
+import Color from '../../server/color.js';
 
 ////////////////////////////
 const GIF = document.querySelector('.GIF');
@@ -106,7 +106,8 @@ let inGame = false;
 let player,
 	actualZoom = 0,
 	players = [],
-	stars = [];
+	stars = [],
+	color = Color.getColor();
 
 function drawGrid() {
 	context.beginPath();
@@ -134,21 +135,21 @@ function drawStars(star) {
 
 function drawPlayer(player) {
 	context.beginPath();
-	context.strokeStyle = Color.getColor();
-	context.fillStyle = player.color;
+	context.strokeStyle = 'black';
+	context.fillStyle = color;
 	context.arc(player.pos.x, player.pos.y, player.radius, 0, 2 * Math.PI, false);
 	context.fill();
 	context.stroke();
 
 	context.textAlign = 'center';
-	context.fillStyle = 'black';
+	context.fillStyle = 'white';
 	context.font = `bold ${player.radius * 0.5}px arial`;
 	context.fillText(
 		player.name,
 		player.pos.x,
 		player.pos.y + player.radius * 0.15
 	);
-	context.strokeStyle = 'yellow';
+	context.strokeStyle = 'white';
 	context.strokeText(
 		player.name,
 		player.pos.x,
