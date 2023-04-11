@@ -6,6 +6,6 @@ export default class Color {
 	}
 
 	static getWhite() {
-		return this.colors[0];
+		return 'White';
 	}
 }
