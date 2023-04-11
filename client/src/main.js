@@ -1,39 +1,9 @@
 import { io } from 'socket.io-client';
 
-const GIF = document.querySelector('.GIF');
-
-const mainMenu = document.querySelector('.homeSelect');
-
-const Game = document.querySelector('.GameCanvas');
-
-const credit = document.querySelector('.credit');
-
-// document.querySelector('.Score').addEventListener('click', event => {
-// 	event.preventDefault();
-// 	homeSelector.style.display = 'none';
-// 	scores.style.display = '';
-// });
-
-document.querySelector('.Credit').addEventListener('click', event => {
-	event.preventDefault();
-	homeSelector.style.display = 'none';
-	credit.style.display = '';
-});
-
-document.querySelector('.Acceuil_scores').addEventListener('click', event => {
-	event.preventDefault();
-	homeSelector.style.display = '';
-	//scores.style.display = 'none';
-});
-document.querySelector('.Acceuil_credit').addEventListener('click', event => {
-	event.preventDefault();
-	homeSelector.style.display = '';
-	credit.style.display = 'none';
-});
-
 ////////////////////////////
-
-//const mainMenu = document.querySelector('.menu');
+const GIF = document.querySelector('.GIF');
+const mainMenu = document.querySelector('.homeSelect');
+const Game = document.querySelector('.GameCanvas');
 const playButton = document.querySelector('.play');
 const leaderBoard = document.querySelector('.leaderBoard');
 const score = document.querySelector('.score-stars');
@@ -43,19 +13,16 @@ const endGameMenu = document.querySelector('.Game-Over');
 const playAgain = document.querySelector('.Rejouer');
 const skip = document.querySelector('.skipButton');
 const closeButton = document.querySelector('.closeButton');
-
-closeButton.addEventListener('click', event => {
-	event.preventDefault();
-	endGameMenu.classList.add('hide');
-	mainMenu.classList.remove('hide');
-});
+const ScoreButton = document.querySelector('.ScoreButton');
+const CreditButton = document.querySelector('.CreditButton');
+const credit = document.querySelector('.credit');
+const scoresBord = document.querySelector('.scoresBord');
 
 skip.addEventListener('click', event => {
 	event.preventDefault();
 	GIF.classList.add('hide');
 	mainMenu.classList.remove('hide');
 	Game.classList.remove('hide');
-	Game.style.visibility = '';
 });
 
 playButton.addEventListener('click', event => {
@@ -67,6 +34,34 @@ playButton.addEventListener('click', event => {
 	socket.emit('join', nameInput.value);
 });
 
+ScoreButton.addEventListener('click', event => {
+	event.preventDefault();
+	mainMenu.classList.add('hide');
+	scoresBord.classList.remove('hide');
+	Game.classList.add('hide');
+});
+
+CreditButton.addEventListener('click', event => {
+	event.preventDefault();
+	mainMenu.classList.add('hide');
+	credit.classList.remove('hide');
+	Game.classList.add('hide');
+});
+
+document.querySelector('.Acceuil_scores').addEventListener('click', event => {
+	event.preventDefault();
+	mainMenu.classList.remove('hide');
+	scoresBord.classList.add('hide');
+	Game.classList.remove('hide');
+});
+
+document.querySelector('.Acceuil_credit').addEventListener('click', event => {
+	event.preventDefault();
+	mainMenu.classList.remove('hide');
+	credit.classList.add('hide');
+	Game.classList.remove('hide');
+});
+
 playAgain.addEventListener('click', event => {
 	event.preventDefault();
 	endGameMenu.classList.add('hide');
@@ -75,7 +70,11 @@ playAgain.addEventListener('click', event => {
 	socket.emit('join', nameInput.value);
 });
 
-const interpolationZoomStep = 0.1;
+closeButton.addEventListener('click', event => {
+	event.preventDefault();
+	endGameMenu.classList.add('hide');
+	mainMenu.classList.remove('hide');
+});
 
 const socket = new io();
 
